@@ -1,0 +1,24 @@
+import math
+n=int(input())#12345
+
+revn=0
+
+d=round(math.log10(n))
+ld=n%10
+fd=round(n/pow(10,d))
+swn=ld*(round(pow(10,d)))
+swn=swn+round(n%(pow(10,d)))
+swn=swn-ld  
+swn=swn+fd
+print(swn)        
+print(d,ld,fd)
+while n>2:
+    a=n%10
+    revn=revn*10+a
+    n=n//10
+swn=ld*(round(pow(10,d)))
+swn=(revn*10)-swn
+fwn=fd*(round(pow(10,d)))
+swn=fwn+swn
+swn=swn+ld
+print(swn)
